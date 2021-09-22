@@ -6,7 +6,7 @@ schema:
 dataSources:
   - kind: ethereum/contract
     name: Factory
-    network: bsc
+    network: velas
     source:
       address: "0x63394F65ebC5e96e70081C584cFA0a506A04dcCe"
       abi: Factory
@@ -34,7 +34,7 @@ dataSources:
 templates:
   - kind: ethereum/contract
     name: Pair
-    network: bsc
+    network: velas
     source:
       abi: Pair
     mapping:
