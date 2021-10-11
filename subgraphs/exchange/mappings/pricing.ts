@@ -4,7 +4,7 @@ import { Pair, Token, Bundle } from "../generated/schema";
 import { ZERO_BD, factoryContract, ADDRESS_ZERO, ONE_BD } from "./utils";
 
 let WVLX_ADDRESS = "0x071da4a38460bb14686c1d44d85a7bdad0d6bac5";
-let USDT_WVLX_PAIR = "0xF20c93c5e5F534C9D95567497Ea17a841164d37b"; // created block 648115
+let USDT_WVLX_PAIR = "0xf20c93c5e5f534c9d95567497ea17a841164d37b"; // created block 648115
 
 export function getBnbPriceInUSD(): BigDecimal {
   // fetch eth prices for each stablecoin
