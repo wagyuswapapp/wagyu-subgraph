@@ -3,8 +3,8 @@ import { BigDecimal, Address } from "@graphprotocol/graph-ts/index";
 import { Pair, Token, Bundle } from "../generated/schema";
 import { ZERO_BD, factoryContract, ADDRESS_ZERO, ONE_BD } from "./utils";
 
-let WVLX_ADDRESS = "0x071da4a38460bb14686c1d44d85a7bdad0d6bac5";
-let USDT_WVLX_PAIR = "0xf20c93c5e5f534c9d95567497ea17a841164d37b"; // created block 648115
+let WVLX_ADDRESS = "0xc5ee6727425060ce473ffeda84a7ec03ed0e9812";
+let USDT_WVLX_PAIR = "0xbd98e06dd203e1d5138b57af4c40563bb0af5bf2"; // created block 648115
 
 export function getBnbPriceInUSD(): BigDecimal {
   // fetch eth prices for each stablecoin
@@ -19,12 +19,21 @@ export function getBnbPriceInUSD(): BigDecimal {
 
 // token where amounts should contribute to tracked volume and liquidity
 let WHITELIST: string[] = [
-  "0x071da4a38460bb14686c1d44d85a7bdad0d6bac5", // WVLX
-  "0xe2172a8e1762ae9962a59ee88a731522a61a4cc9", // BUSD
-  "0x6ef054b3e3c3c83e14527e8fa593c2c4435a6ea4", // USDT
-  "0x6b82bdb5a1adffa3816d1f942d60f0269647c646", // USDC
-  "0x3538c7f88adbc8ad1f435f7ea70287e26b926344", // WETH
+  "0xc5ee6727425060ce473ffeda84a7ec03ed0e9812", // WVLX
+  "0xc111c29a988ae0c0087d97b33c6e6766808a3bd3", // BUSD
+  "0x01445c31581c354b7338ac35693ab2001b50b9ae", // USDT
+  "0xe2c120f188ebd5389f71cf4d9c16d05b62a58993", // USDC
+  "0x85219708c49aa701871ad330a94ea0f41dff24ca", // WETH
 ];
+
+// tesnet
+// let WHITELIST: string[] = [
+//   "0x071da4a38460bb14686c1d44d85a7bdad0d6bac5", // WVLX
+//   "0xe2172a8e1762ae9962a59ee88a731522a61a4cc9", // BUSD
+//   "0x6ef054b3e3c3c83e14527e8fa593c2c4435a6ea4", // USDT
+//   "0x6b82bdb5a1adffa3816d1f942d60f0269647c646", // USDC
+//   "0x3538c7f88adbc8ad1f435f7ea70287e26b926344", // WETH
+// ];
 
 // minimum liquidity for price to get tracked
 let MINIMUM_LIQUIDITY_THRESHOLD_BNB = BigDecimal.fromString("10");
