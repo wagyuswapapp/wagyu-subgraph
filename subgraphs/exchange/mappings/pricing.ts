@@ -3,8 +3,8 @@ import { BigDecimal, Address } from "@graphprotocol/graph-ts/index";
 import { Pair, Token, Bundle } from "../generated/schema";
 import { ZERO_BD, factoryContract, ADDRESS_ZERO, ONE_BD } from "./utils";
 
-let WVLX_ADDRESS = "0xc5ee6727425060ce473ffeda84a7ec03ed0e9812";
-let USDT_WVLX_PAIR = "0xbd98e06dd203e1d5138b57af4c40563bb0af5bf2"; // created block 648115
+let WVLX_ADDRESS = "0x485f49e0764c305dc6fc1da2e5b786f65f8c95aa";
+let USDT_WVLX_PAIR = "0x92a86d1585918bc077ddd9c7c63f32daae687923"; // created block 648115
 
 export function getBnbPriceInUSD(): BigDecimal {
   // fetch eth prices for each stablecoin
@@ -19,7 +19,7 @@ export function getBnbPriceInUSD(): BigDecimal {
 
 // token where amounts should contribute to tracked volume and liquidity
 let WHITELIST: string[] = [
-  "0xc5ee6727425060ce473ffeda84a7ec03ed0e9812", // WVLX
+  "0x485f49e0764c305dc6fc1da2e5b786f65f8c95aa", // WVLX
   "0xc111c29a988ae0c0087d97b33c6e6766808a3bd3", // BUSD
   "0x01445c31581c354b7338ac35693ab2001b50b9ae", // USDT
   "0xe2c120f188ebd5389f71cf4d9c16d05b62a58993", // USDC
