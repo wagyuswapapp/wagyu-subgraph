@@ -2,7 +2,7 @@
 import { BigDecimal, Address } from "@graphprotocol/graph-ts/index";
 import { Pair, Token, Bundle } from "../generated/schema";
 import { ZERO_BD, factoryContract, ADDRESS_ZERO, ONE_BD } from "./utils";
-
+// TODO:
 let WVLX_ADDRESS = "0x485f49e0764c305dc6fc1da2e5b786f65f8c95aa";
 let USDT_WVLX_PAIR = "0x92a86d1585918bc077ddd9c7c63f32daae687923"; // created block 648115
 
@@ -16,7 +16,7 @@ export function getBnbPriceInUSD(): BigDecimal {
     return ZERO_BD;
   }
 }
-
+// TODO:
 // token where amounts should contribute to tracked volume and liquidity
 let WHITELIST: string[] = [
   "0x485f49e0764c305dc6fc1da2e5b786f65f8c95aa", // WVLX
