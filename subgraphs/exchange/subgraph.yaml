@@ -8,9 +8,9 @@ dataSources:
     name: Factory
     network: velas
     source:
-      address: "0x90594eaff8567c16cf27528181d99a125b8d5cf3"
+      address: "0xa29971bcbcaef7f8a02123262ff53760078409e4"
       abi: Factory
-      startBlock: 142822
+      startBlock: 176205
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
