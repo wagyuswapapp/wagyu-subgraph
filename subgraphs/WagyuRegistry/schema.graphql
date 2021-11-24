@@ -1,0 +1,5 @@
+type Registry @entity {
+  id: ID!
+  "IPFS HASH"
+  hash: String!
+}
