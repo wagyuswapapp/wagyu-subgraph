@@ -6,7 +6,7 @@ dataSources:
     name: WagyuRegistry
     network: velas-testnet
     source:
-      address: "0xD81a701C2e41b831B05DB4F49221eE989A1635B8"
+      address: "0x0FCe7473876B7B01E349Fa7e5e0F93aD54B1764B"
       abi: WagyuRegistry
     mapping:
       kind: ethereum/events
