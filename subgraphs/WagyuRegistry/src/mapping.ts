@@ -3,7 +3,7 @@ import {Value,JSONValue, BigInt, BigDecimal, ipfs, json, Bytes, log } from "@gra
 import {
   TokenAdded
 } from "../generated/WagyuRegistry/WagyuRegistry"
-import { Registry } from "../generated/schema"
+import { Token } from "../generated/schema"
 
 
 
@@ -27,18 +27,18 @@ let jsonData = json.fromBytes(data as Bytes);
 
 
 
-let registry = new Registry(event.params._hash);
-registry.hash=event.params._hash;
+let token = new Token(event.params._hash);
+token.hash=event.params._hash;
 
-registry.tokenName=jsonData.toObject().get('tokenName').toString();
-registry.tokenSymbol=jsonData.toObject().get('tokenSymbol').toString();
-registry.tokenAddress=jsonData.toObject().get('tokenAddress').toString();
+token.name=jsonData.toObject().get('tokenName').toString();
+token.symbol=jsonData.toObject().get('tokenSymbol').toString();
+token.address=jsonData.toObject().get('tokenAddress').toString();
+token.chainId=jsonData.toObject().get('chainId').toString();
+token.decimals=jsonData.toObject().get('tokenDecimals').toString();
 
-registry.tokenDecimals=jsonData.toObject().get('tokenDecimals').toString();
+token.logoURI=jsonData.toObject().get('icon').toString();
 
-registry.icon=jsonData.toObject().get('icon').toString();
-
-registry.save();
+token.save();
 
 
 

@@ -6,9 +6,9 @@ dataSources:
     name: WagyuRegistry
     network: velas
     source:
-      address: "0xcFeDdf43Ce1Ac2EBBBDDF2CA6A50E1b8eAC6da25"
+      address: "0xa39D26ac57930604Aaeb4Ad6353628Ab5b24Fc47"
       abi: WagyuRegistry
-      startBlock: 1492922
+      startBlock: 4843618
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
