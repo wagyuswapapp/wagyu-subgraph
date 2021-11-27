@@ -4,13 +4,14 @@ schema:
 dataSources:
   - kind: ethereum/contract
     name: WagyuRegistry
-    network: velas-testnet
+    network: velas
     source:
-      address: "0x0FCe7473876B7B01E349Fa7e5e0F93aD54B1764B"
+      address: "0xcFeDdf43Ce1Ac2EBBBDDF2CA6A50E1b8eAC6da25"
       abi: WagyuRegistry
+      startBlock: 1492922
     mapping:
       kind: ethereum/events
-      apiVersion: 0.0.5
+      apiVersion: 0.0.4
       language: wasm/assemblyscript
       entities:
         - TokenAdded

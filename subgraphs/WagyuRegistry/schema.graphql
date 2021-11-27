@@ -1,5 +1,10 @@
 type Registry @entity {
   id: ID!
-  "IPFS HASH"
-  hash: String!
+  hash: String
+  tokenName: String
+  tokenSymbol: String
+  tokenAddress: String
+  tokenDecimals: String
+  icon: String
+  acttive: Boolean
 }
