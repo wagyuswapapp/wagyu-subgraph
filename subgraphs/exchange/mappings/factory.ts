@@ -11,6 +11,7 @@ import {
   fetchTokenName,
   fetchTokenDecimals,
 } from "./utils";
+import { handleBlock } from "./blocks";
 
 export function handlePairCreated(event: PairCreated): void {
   let factory = PancakeFactory.load(FACTORY_ADDRESS);
@@ -91,6 +92,9 @@ export function handlePairCreated(event: PairCreated): void {
   pair.block = event.block.number;
   pair.timestamp = event.block.timestamp;
   pair.save();
+
+  // save block info
+  handleBlock(event.block);
 
   PairTemplate.create(event.params.pair);
 }

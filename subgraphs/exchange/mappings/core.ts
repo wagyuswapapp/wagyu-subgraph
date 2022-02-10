@@ -11,6 +11,7 @@ import {
   Bundle,
 } from "../generated/schema";
 import { Mint, Burn, Swap, Transfer, Sync } from "../generated/templates/Pair/Pair";
+import { handleBlock } from "./blocks";
 import { updatePairDayData, updateTokenDayData, updatePancakeDayData, updatePairHourData } from "./dayUpdates";
 import { getBnbPriceInUSD, findBnbPerToken, getTrackedVolumeUSD, getTrackedLiquidityUSD } from "./pricing";
 import { convertTokenToDecimal, ADDRESS_ZERO, FACTORY_ADDRESS, ONE_BI, ZERO_BD, BI_18 } from "./utils";
@@ -159,6 +160,9 @@ export function handleTransfer(event: Transfer): void {
   }
 
   transaction.save();
+
+  // save block info
+  handleBlock(event.block);
 }
 
 export function handleSync(event: Sync): void {
@@ -230,6 +234,9 @@ export function handleSync(event: Sync): void {
   pancake.save();
   token0.save();
   token1.save();
+
+  // save block info
+  handleBlock(event.block);
 }
 
 export function handleMint(event: Mint): void {
@@ -280,6 +287,9 @@ export function handleMint(event: Mint): void {
   updatePancakeDayData(event);
   updateTokenDayData(token0 as Token, event);
   updateTokenDayData(token1 as Token, event);
+
+  // save block info
+  handleBlock(event.block);
 }
 
 export function handleBurn(event: Burn): void {
@@ -335,6 +345,9 @@ export function handleBurn(event: Burn): void {
   updatePancakeDayData(event);
   updateTokenDayData(token0 as Token, event);
   updateTokenDayData(token1 as Token, event);
+
+  // save block info
+  handleBlock(event.block);
 }
 
 export function handleSwap(event: Swap): void {
@@ -488,4 +501,7 @@ export function handleSwap(event: Swap): void {
     amount1Total.times(token1.derivedBNB as BigDecimal).times(bundle.bnbPrice)
   );
   token1DayData.save();
+
+  // save block info
+  handleBlock(event.block);
 }
