@@ -27,6 +27,10 @@ let WHITELIST: string[] = [
   "0xcd7509b76281223f5b7d3ad5d47f8d7aa5c2b9bf", // USDV
   "0xe3f5a90f9cb311505cd691a46596599aa1a0ad7d", // DAI
   "0x639a647fbe20b6c8ac19e48e2de44ea792c62c5c", // WBTC
+  "0xabf26902fd7b624e0db40d31171ea9dddf078351", // WAGYU
+  "0xe2C120f188eBd5389F71Cf4d9C16d05b62A58993", // USDC
+  "0x72eb7ca07399ec402c5b7aa6a65752b6a1dc0c27", // ASTRO
+  "0x6292d721d00bddaf683e1e64e4fcc9588c95398d", // ADA
 ];
 
 // tesnet
