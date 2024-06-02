@@ -1,0 +1,11 @@
+type Token @entity {
+  id: ID!
+  hash: String
+  name: String!
+  symbol: String!
+  address: String!
+  decimals: String!
+  chainId: String!
+  logoURI: String
+  acttive: Boolean
+}

@@ -1,0 +1,24 @@
+specVersion: 0.0.2
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: WagyuRegistry
+    network: velas
+    source:
+      address: "0xa39D26ac57930604Aaeb4Ad6353628Ab5b24Fc47"
+      abi: WagyuRegistry
+      startBlock: 4843618
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - TokenAdded
+      abis:
+        - name: WagyuRegistry
+          file: ./abis/WagyuRegistry.json
+      eventHandlers:
+        - event: TokenAdded(string)
+          handler: handleTokenAdded
+      file: ./src/mapping.ts
